@@ -27,7 +27,7 @@
 }
 
 a {
-  color: #f38b02;
+  color: #f0680e;
   text-decoration: none;
 }
 
@@ -66,7 +66,7 @@ main {
 
 .tituloNuestraPasion {
   text-align: center;
-  color: #f38b02;
+  color: #f0680e;
   letter-spacing: 0.25rem;
 }
 
@@ -84,10 +84,79 @@ main {
   background-color: #000000;
 }
 
+.nuestroMenuTitulo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
 .tituloMenu {
-  color: #f0ec0e;
+  color: #f0680e;
   text-align: center;
+  grid-area: 1/1/2/3;
   letter-spacing: 0.25rem;
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.iconoCafeNuestroMenu {
+  grid-area: 1/3/2/4;
+  height: 6rem;
+  width: 6rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.pmenu {
+  color: #fff;
+  text-align: center;
+}
+
+.contenedorMenu {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem;
+  justify-items: center;
+  color: #fff;
+}
+
+.menuCafe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.nombreCafe {
+  grid-area: 1/1/2/2;
+  text-align: center;
+  color: #f0680e;
+}
+
+.descCafe {
+  grid-area: 2/1/3/2;
+  text-align: center;
+  color: #fff;
+  margin: 0.25rem;
+}
+
+.precioCafe {
+  grid-area: 3/1/4/2;
+  text-align: center;
+  color: #f0680e;
+}
+
+.imgCafe {
+  grid-area: 1/2/4/3;
+  width: 9rem;
+  height: 9rem;
+  background-size: cover;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1rem;
+  margin: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -103,18 +172,11 @@ main {
   .tituloNuestraPasion {
     grid-area: 1/1/2/4;
     justify-items: center;
-    color: #f38b02;
+    color: #f0680e;
     letter-spacing: 0.25rem;
   }
   .nuestraPasiontxt {
     grid-area: 2/1/3/3;
-  }
-  .imgNuestroCafe {
-    grid-area: 2/3/3/4;
-    width: 70%;
-    border: 1rem;
-    gap: 1rem;
-    padding-bottom: 2rem;
   }
 }
 
