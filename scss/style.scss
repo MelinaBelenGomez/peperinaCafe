@@ -1,0 +1,162 @@
+//---------------------Estilo MOBILE-
+
+//Variables
+$colorBlanco: #fff;
+$colorNaranja: #f38b02;
+$colorFondo: #f1e0d6a9;
+$colorAmarillo: #f0ec0e;
+$colorNegro: #000000;
+$colorBackground: #0000009f;
+/*Estilos generales*/
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Header estilos */
+
+
+/*Body estilos*/
+
+//Body header
+
+.indexHeader {
+    background-image: url(../images/backgroundHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.25rem;
+}
+
+.indexPeperina {
+    letter-spacing: 0.5rem;
+    color: $colorBlanco;
+    text-shadow:
+        1px 1px 0 $colorNegro,
+        -1px 1px 0 $colorNegro,
+        1px -1px 0 $colorNegro,
+        -1px -1px 0 $colorNegro;
+
+}
+
+.indexHomeP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorBackground;
+}
+
+a {
+    color: $colorNaranja;
+    text-decoration: none;
+
+}
+
+.linksInicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0.5rem;
+    gap: 1rem;
+    list-style-type: none;
+    background-color: $colorBackground;
+
+}
+
+.indexHome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    color: $colorBlanco;
+    margin: 3;
+    text-align: center;
+}
+
+//Body main
+
+
+
+
+main {
+    background-color: $colorFondo;
+    border-radius: 0.5rem;
+}
+
+//Body Nuestra Pasion
+
+.bodyMainNuestraPasion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem;
+    justify-items: center;
+
+}
+
+.tituloNuestraPasion {
+    text-align: center;
+    color: $colorNaranja;
+    letter-spacing: 0.25rem;
+}
+
+.imgNuestroCafe {
+    width:12rem;
+    height: auto;
+    border-radius: 0.25rem;
+
+}
+
+.nuestraPasiontxt {
+    text-align: center;
+}
+
+
+//Body Nuestro menu
+
+.bodyMainNuestroMenu {
+    background-color: $colorNegro;
+}
+
+.tituloMenu {
+    color: $colorAmarillo;
+    text-align: center;
+    letter-spacing: 0.25rem;
+
+}
+
+//TABLET
+@media (min-width: 600px) {
+
+    main {
+        background-color: $colorFondo;
+        border-radius: 0.5rem;
+    }
+
+    .bodyMainNuestraPasion {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem;
+    }
+
+    .tituloNuestraPasion {
+        grid-area: 1/1/2/4;
+        justify-items: center;
+        color: $colorNaranja;
+        letter-spacing: 0.25rem;
+    }
+
+    .nuestraPasiontxt {
+        grid-area: 2/1/3/3;
+    }
+
+    .imgNuestroCafe {
+        grid-area: 2/3/3/4;
+        width: 70%;
+        border: 1rem;
+        gap: 1rem;
+        padding-bottom: 2rem;
+
+    }
+
+}

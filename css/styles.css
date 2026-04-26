@@ -1,0 +1,121 @@
+/*Estilos generales*/
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Header estilos */
+/*Body estilos*/
+.indexHeader {
+  background-image: url(../images/backgroundHeader.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.25rem;
+}
+
+.indexPeperina {
+  letter-spacing: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000000, -1px 1px 0 #000000, 1px -1px 0 #000000, -1px -1px 0 #000000;
+}
+
+.indexHomeP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+}
+
+a {
+  color: #f38b02;
+  text-decoration: none;
+}
+
+.linksInicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.5rem;
+  gap: 1rem;
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+}
+
+.indexHome {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  color: #fff;
+  margin: 3;
+  text-align: center;
+}
+
+main {
+  background-color: rgba(241, 224, 214, 0.662745098);
+  border-radius: 0.5rem;
+}
+
+.bodyMainNuestraPasion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem;
+  justify-items: center;
+}
+
+.tituloNuestraPasion {
+  text-align: center;
+  color: #f38b02;
+  letter-spacing: 0.25rem;
+}
+
+.imgNuestroCafe {
+  width: 12rem;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.nuestraPasiontxt {
+  text-align: center;
+}
+
+.bodyMainNuestroMenu {
+  background-color: #000000;
+}
+
+.tituloMenu {
+  color: #f0ec0e;
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    background-color: rgba(241, 224, 214, 0.662745098);
+    border-radius: 0.5rem;
+  }
+  .bodyMainNuestraPasion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+  }
+  .tituloNuestraPasion {
+    grid-area: 1/1/2/4;
+    justify-items: center;
+    color: #f38b02;
+    letter-spacing: 0.25rem;
+  }
+  .nuestraPasiontxt {
+    grid-area: 2/1/3/3;
+  }
+  .imgNuestroCafe {
+    grid-area: 2/3/3/4;
+    width: 70%;
+    border: 1rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
