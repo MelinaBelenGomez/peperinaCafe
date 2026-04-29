@@ -195,6 +195,55 @@ grid-template-rows: repeat(3, 1fr);
     margin: 1rem;
 }
 
+.mainDatosLocal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $colorFondo;
+
+}
+
+.mainDatosLocalUbicacion{
+    grid-area:1/1/2/2;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
+}
+
+.iconoDatosLocal{
+    grid-template-areas: 1/1/2/2;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    margin: 0.25rem;
+}
+
+
+
+.DescDatosLocal{
+    grid-area:2/1/3/2;
+    text-align: center;
+    align-self: flex-start;
+    margin: 0.25rem;
+
+}
+
+.txtDatosLocal{
+    grid-area:3/1/4/2;
+    text-align: center;
+    align-self: flex-start;
+    margin: 0.25rem;
+}
+
+.mainDatosLocalHora{
+    grid-area:1/2/2/3;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
+}
+
+
 //TABLET
 @media (min-width: 600px) {
 
@@ -220,9 +269,5 @@ grid-template-rows: repeat(3, 1fr);
         grid-area: 2/1/3/3;
     }
 
-    .imgNuestroCafe {
-
-
-    }
 
 }
