@@ -26,8 +26,8 @@ $colorBackground: #0000009f;
     background-repeat: no-repeat;
     border-radius: 0.25rem;
 
-
     .indexPeperina {
+        padding: 2rem;
         letter-spacing: 0.5rem;
         color: $colorBlanco;
         text-shadow:
@@ -35,7 +35,6 @@ $colorBackground: #0000009f;
             -1px 1px 0 $colorNegro,
             1px -1px 0 $colorNegro,
             -1px -1px 0 $colorNegro;
-
     }
 
 }
@@ -111,6 +110,9 @@ main {
 .nuestraPasiontxt {
     text-align: center;
 }
+
+
+
 
 
 //Body Nuestro menu
@@ -259,6 +261,120 @@ main {
     border-radius: .5rem;
     margin: 1rem;
 }
+
+.contenedorContacto {
+    display: flex;
+    flex-direction: column;
+
+    .tituloContacto {
+        color: $colorNaranja;
+        text-align: center;
+        letter-spacing: 0.25rem;
+    }
+
+    .pcontacto {
+        text-align: center;
+        color: $colorNegro;
+    }
+
+    .formularioContacto {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem;
+        align-items: center;
+
+        .inputContacto {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid $colorNegro;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .btnContacto {
+            background-color: $colorNaranja;
+            color: $colorBlanco;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: ($colorNaranja, 10%);
+            }
+        }
+
+        .textareaContacto {
+            width: 100%;
+            height: 10rem;
+
+        }
+
+
+    }
+}
+
+
+.iconoTazaFooter {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem;
+}
+
+
+footer {
+    background-color: $colorNegro;
+    padding: 1rem;
+
+
+    .logoFooter {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .tituloFooter {
+            color: $colorBlanco;
+            ;
+        }
+
+        .iconoTazaFooter {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .footerInicio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        .redesFooter {
+            display: flex;
+            gap: 0.25rem;
+            margin-left: auto;
+
+
+            .iconoRedes {
+                width: 2rem;
+                height: 2rem;
+                margin: 0.25rem;
+
+            }
+        }
+    }
+
+
+    .copyright {
+        text-align: center;
+        color: $colorBlanco;
+        font-size: 0.8rem;
+    }
+}
+
+
 
 
 //TABLET
