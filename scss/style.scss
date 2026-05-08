@@ -25,16 +25,18 @@ $colorBackground: #0000009f;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0.25rem;
-}
 
-.indexPeperina {
-    letter-spacing: 0.5rem;
-    color: $colorBlanco;
-    text-shadow:
-        1px 1px 0 $colorNegro,
-        -1px 1px 0 $colorNegro,
-        1px -1px 0 $colorNegro,
-        -1px -1px 0 $colorNegro;
+
+    .indexPeperina {
+        letter-spacing: 0.5rem;
+        color: $colorBlanco;
+        text-shadow:
+            1px 1px 0 $colorNegro,
+            -1px 1px 0 $colorNegro,
+            1px -1px 0 $colorNegro,
+            -1px -1px 0 $colorNegro;
+
+    }
 
 }
 
@@ -116,83 +118,87 @@ main {
 .bodyMainNuestroMenu {
     background-color: $colorNegro;
 
-}
 
-.nuestroMenuTitulo{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-}
-
-.tituloMenu {
-    color: $colorNaranja;
-    text-align: center;
-    grid-area: 1/1/2/3;
-    letter-spacing: 0.25rem;
-    font-family: "Playwrite NZ Guides", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.iconoCafeNuestroMenu{
-    grid-area:1/3/2/4;
-    height: 6rem;
-    width: 6rem;
-    justify-self: center; 
-    align-self: center;
-
-}
+    .nuestroMenuTitulo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
 
 
-.pmenu{
-    color:$colorBlanco;
-    text-align: center;
-}
 
-.contenedorMenu {
-    display: grid;
-    gap: 1rem;
-    margin: 1rem;
-    justify-items: center;
-    color: $colorBlanco;
-}
+    .tituloMenu {
+        color: $colorNaranja;
+        text-align: center;
+        grid-area: 1/1/2/3;
+        letter-spacing: 0.25rem;
+        font-family: "Playwrite NZ Guides", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
 
-.menuCafe {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
-}
+    .iconoCafeNuestroMenu {
+        grid-area: 1/3/2/4;
+        height: 6rem;
+        width: 6rem;
+        justify-self: center;
+        align-self: center;
 
-.nombreCafe {
-    grid-area: 1/1/2/2;
-    text-align: center;
-    color: $colorNaranja;
-}
+    }
 
-.descCafe{
-    grid-area: 2/1/3/2;
-    text-align: center;
-    color: $colorBlanco;
-    margin: 0.25rem;
-}
 
-.precioCafe{
-    grid-area: 3/1/4/2;
-    text-align: center;
-    color: $colorNaranja;
-}
+    .pmenu {
+        color: $colorBlanco;
+        text-align: center;
+    }
 
-.imgCafe{
-    grid-area: 1/2/4/3;
-    width: 9rem;
-    height: 9rem;
-    background-size: cover;
-    border-radius: 0.25rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 1rem;
-    margin: 1rem;
+    .contenedorMenu {
+        display: grid;
+        gap: 1rem;
+        margin: 1rem;
+        justify-items: center;
+        color: $colorBlanco;
+    }
+
+    .menuCafe {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+
+        .nombreCafe {
+            grid-area: 1/1/2/2;
+            text-align: center;
+            color: $colorNaranja;
+        }
+
+        .descCafe {
+            grid-area: 2/1/3/2;
+            text-align: center;
+            color: $colorBlanco;
+            margin: 0.25rem;
+        }
+
+        .precioCafe {
+            grid-area: 3/1/4/2;
+            text-align: center;
+            color: $colorNaranja;
+        }
+
+        .imgCafe {
+            grid-area: 1/2/4/3;
+            width: 9rem;
+            height: 9rem;
+            background-size: cover;
+            border-radius: 0.25rem;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            border: 1rem;
+            margin: 1rem;
+        }
+    }
+
 }
 
 .mainDatosLocal {
@@ -201,46 +207,57 @@ grid-template-rows: repeat(3, 1fr);
     grid-template-rows: 1fr;
     background-color: $colorFondo;
 
+
+
+
+    .mainDatosLocalUbicacion {
+        grid-area: 1/1/2/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
+        border-radius: 25%;
+    }
+
+    .iconoDatosLocal {
+        grid-template-areas: 1/1/2/2;
+        width: 2rem;
+        height: 2rem;
+        align-self: center;
+        justify-self: center;
+        margin: 0.25rem;
+    }
+
+    .DescDatosLocal {
+        grid-area: 2/1/3/2;
+        text-align: center;
+        align-self: flex-start;
+        margin: 0.25rem;
+
+    }
+
+    .txtDatosLocal {
+        grid-area: 3/1/4/2;
+        text-align: center;
+        align-self: flex-start;
+        margin: 0.25rem;
+    }
+
+    .mainDatosLocalHora {
+        grid-area: 1/2/2/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
+        border-radius: 25%;
+    }
 }
 
-.mainDatosLocalUbicacion{
-    grid-area:1/1/2/2;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
-}
-
-.iconoDatosLocal{
-    grid-template-areas: 1/1/2/2;
-    width: 2rem;
-    height: 2rem;
-    align-self: center;
+.conoceNuestrosLocales {
+    background-color: $colorNaranja;
+    color: $colorBlanco;
     justify-self: center;
-    margin: 0.25rem;
-}
-
-
-
-.DescDatosLocal{
-    grid-area:2/1/3/2;
-    text-align: center;
-    align-self: flex-start;
-    margin: 0.25rem;
-
-}
-
-.txtDatosLocal{
-    grid-area:3/1/4/2;
-    text-align: center;
-    align-self: flex-start;
-    margin: 0.25rem;
-}
-
-.mainDatosLocalHora{
-    grid-area:1/2/2/3;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; //No quedaba lindo con repeat(3, 1fr);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: 1rem;
 }
 
 
