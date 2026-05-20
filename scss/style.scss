@@ -62,6 +62,11 @@ a {
     list-style-type: none;
     background-color: $colorBackground;
 
+    .linksInicioStyle{
+        color: $colorNaranja;
+        text-decoration: none;
+    }
+
 }
 
 .indexHome {
@@ -149,7 +154,7 @@ main {
     }
 
 
-    .pmenu {
+    .pMenu {
         color: $colorBlanco;
         text-align: center;
     }
@@ -272,7 +277,7 @@ main {
         letter-spacing: 0.25rem;
     }
 
-    .pcontacto {
+    .pContacto {
         text-align: center;
         color: $colorNegro;
     }
@@ -292,7 +297,7 @@ main {
             max-width: 400px;
         }
 
-        .btnContacto {
+        .btnEnviar {
             background-color: $colorNaranja;
             color: $colorBlanco;
             padding: 0.5rem 1rem;
@@ -386,16 +391,12 @@ footer {
     }
 
     .bodyMainNuestraPasion {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 1rem;
     }
 
     .tituloNuestraPasion {
         grid-area: 1/1/2/4;
-        justify-items: center;
-        color: $colorNaranja;
-        letter-spacing: 0.25rem;
+        justify-self: center;
     }
 
     .nuestraPasiontxt {
