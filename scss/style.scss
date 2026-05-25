@@ -62,7 +62,7 @@ a {
     list-style-type: none;
     background-color: $colorBackground;
 
-    .linksInicioStyle{
+    .linksInicioStyle {
         color: $colorNaranja;
         text-decoration: none;
     }
@@ -137,18 +137,20 @@ main {
     .tituloMenu {
         color: $colorNaranja;
         text-align: center;
+        justify-self: flex-end;
         grid-area: 1/1/2/3;
         letter-spacing: 0.25rem;
         font-family: "Playwrite NZ Guides", cursive;
         font-weight: 400;
         font-style: normal;
+        padding: 1rem;
     }
 
     .iconoCafeNuestroMenu {
         grid-area: 1/3/2/4;
         height: 6rem;
         width: 6rem;
-        justify-self: center;
+        justify-self: flex-start;
         align-self: center;
 
     }
@@ -382,10 +384,61 @@ footer {
 
 
 
-//TABLET
+//*******************      TABLET        ****************************************************
 @media (min-width: 600px) {
 
-    main {
+    //Body header
+
+    .indexHeader {
+        background-image: url(../images/backgroundHeaderTablet.png);
+
+        .indexPeperina {
+            font-weight: bold;
+            justify-self: flex-end;
+        }
+
+    }
+
+    .indexHomeP {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $colorBackground;
+    }
+
+    a {
+        color: $colorNaranja;
+        text-decoration: none;
+
+    }
+
+    .linksInicio {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+        padding: 0.5rem;
+        gap: 1rem;
+        list-style-type: none;
+        background-color: $colorBackground;
+
+        .linksInicioStyle {
+            color: $colorNaranja;
+            text-decoration: none;
+        }
+
+    }
+
+    .indexHome {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        color: $colorBlanco;
+        margin: 3;
+        text-align: center;
+    }
+
+    ------- main {
         background-color: $colorFondo;
         border-radius: 0.5rem;
     }
@@ -402,6 +455,59 @@ footer {
     .nuestraPasiontxt {
         grid-area: 2/1/3/3;
     }
+
+
+    //Tablet menú ***************************************************/
+
+    .contenedorMenu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedorMenu img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+
+//*******************      NOTEBOOK & PC        ****************************************************
+
+//Notebook $ PC menú ***************************************************/
+@media (min-width: 1003px) {
+    .contenedorMenu {
+        grid-template-columns: repeat(3, 1fr);
+
+        .menuCafe {
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            grid-template-columns: 1fr;
+
+            .nombreCafe {
+                grid-area: 1/1/2/1;
+                justify-self: center;
+            }
+
+            .descCafe {
+                grid-area: 2/1/3/1;
+            }
+
+            .precioCafe {
+                grid-area: 3/1/4/1;
+            }
+
+            .imgCafe {
+                grid-area: 4/1/6/1;
+                justify-self: center;
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+    }
+
+
+
 
 
 }
