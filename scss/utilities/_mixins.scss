@@ -1,0 +1,6 @@
+@mixin bloqueDisplay($displayValue,$gapValue, $marginValue, $alignValue){
+    display: $displayValue;
+    gap: $gapValue;
+    margin: $marginValue;
+    align-items: $alignValue;
+}

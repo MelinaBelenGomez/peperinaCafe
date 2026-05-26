@@ -1,11 +1,8 @@
 //---------------------Estilo MOBILE-
 
 //Variables
-$colorBlanco: #fff;
-$colorNaranja: #f0680e;
-$colorFondo: #f1e0d6a9;
-$colorNegro: #000000;
-$colorBackground: #0000009f;
+@use "./utilities/variables";
+@use "./utilities/mixins";
 /*Estilos generales*/
 
 * {
@@ -29,25 +26,25 @@ $colorBackground: #0000009f;
     .indexPeperina {
         padding: 2rem;
         letter-spacing: 0.5rem;
-        color: $colorBlanco;
+        color: variables.$colorBlanco;
         text-shadow:
-            1px 1px 0 $colorNegro,
-            -1px 1px 0 $colorNegro,
-            1px -1px 0 $colorNegro,
-            -1px -1px 0 $colorNegro;
+            1px 1px 0 variables.$colorNegro,
+            -1px 1px 0 variables.$colorNegro,
+            1px -1px 0 variables.$colorNegro,
+            -1px -1px 0 variables.$colorNegro;
     }
 
 }
 
 .indexHomeP {
-    display: flex;
-    align-items: center;
+
+    @include mixins.bloqueDisplay(flex,0.1rem,0.1rem,center);
     justify-content: center;
-    background-color: $colorBackground;
+    background-color: variables.$colorBackground;
 }
 
 a {
-    color: $colorNaranja;
+    color: variables.$colorNaranja;
     text-decoration: none;
 
 }
@@ -60,10 +57,10 @@ a {
     padding: 0.5rem;
     gap: 1rem;
     list-style-type: none;
-    background-color: $colorBackground;
+    background-color: variables.$colorBackground;
 
     .linksInicioStyle {
-        color: $colorNaranja;
+        color: variables.$colorNaranja;
         text-decoration: none;
     }
 
@@ -73,7 +70,7 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    color: $colorBlanco;
+    color: variables.$colorBlanco;
     margin: 3;
     text-align: center;
 }
@@ -84,7 +81,7 @@ a {
 
 
 main {
-    background-color: $colorFondo;
+    background-color: variables.$colorFondo;
     border-radius: 0.5rem;
 }
 
@@ -101,7 +98,7 @@ main {
 
 .tituloNuestraPasion {
     text-align: center;
-    color: $colorNaranja;
+    color: variables.$colorNaranja;
     letter-spacing: 0.25rem;
 }
 
@@ -123,7 +120,7 @@ main {
 //Body Nuestro menu
 
 .bodyMainNuestroMenu {
-    background-color: $colorNegro;
+    background-color: variables.$colorNegro;
 
 
     .nuestroMenuTitulo {
@@ -135,7 +132,7 @@ main {
 
 
     .tituloMenu {
-        color: $colorNaranja;
+        color: variables.$colorNaranja;
         text-align: center;
         justify-self: flex-end;
         grid-area: 1/1/2/3;
@@ -157,7 +154,7 @@ main {
 
 
     .pMenu {
-        color: $colorBlanco;
+        color: variables.$colorBlanco;
         text-align: center;
     }
 
@@ -166,7 +163,7 @@ main {
         gap: 1rem;
         margin: 1rem;
         justify-items: center;
-        color: $colorBlanco;
+        color: variables.$colorBlanco;
     }
 
     .menuCafe {
@@ -178,20 +175,20 @@ main {
         .nombreCafe {
             grid-area: 1/1/2/2;
             text-align: center;
-            color: $colorNaranja;
+            color: variables.$colorNaranja;
         }
 
         .descCafe {
             grid-area: 2/1/3/2;
             text-align: center;
-            color: $colorBlanco;
+            color: variables.$colorBlanco;
             margin: 0.25rem;
         }
 
         .precioCafe {
             grid-area: 3/1/4/2;
             text-align: center;
-            color: $colorNaranja;
+            color: variables.$colorNaranja;
         }
 
         .imgCafe {
@@ -214,7 +211,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    background-color: $colorFondo;
+    background-color: variables.$colorFondo;
 
 
 
@@ -261,8 +258,8 @@ main {
 }
 
 .conoceNuestrosLocales {
-    background-color: $colorNaranja;
-    color: $colorBlanco;
+    background-color: variables.$colorNaranja;
+    color: variables.$colorBlanco;
     justify-self: center;
     padding: 1rem;
     border-radius: .5rem;
@@ -274,14 +271,14 @@ main {
     flex-direction: column;
 
     .tituloContacto {
-        color: $colorNaranja;
+        color: variables.$colorNaranja;
         text-align: center;
         letter-spacing: 0.25rem;
     }
 
     .pContacto {
         text-align: center;
-        color: $colorNegro;
+        color: variables.$colorNegro;
     }
 
     .formularioContacto {
@@ -294,21 +291,21 @@ main {
         .inputContacto {
             padding: 0.5rem;
             border-radius: 0.25rem;
-            border: 1px solid $colorNegro;
+            border: 1px solid variables.$colorNegro;
             width: 100%;
             max-width: 400px;
         }
 
         .btnEnviar {
-            background-color: $colorNaranja;
-            color: $colorBlanco;
+            background-color: variables.$colorNaranja;
+            color: variables.$colorBlanco;
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
             border: none;
             cursor: pointer;
 
             &:hover {
-                background-color: ($colorNaranja, 10%);
+                background-color: (variables.$colorNaranja, 10%);
             }
         }
 
@@ -331,7 +328,7 @@ main {
 
 
 footer {
-    background-color: $colorNegro;
+    background-color: variables.$colorNegro;
     padding: 1rem;
 
 
@@ -341,7 +338,7 @@ footer {
         gap: 0.5rem;
 
         .tituloFooter {
-            color: $colorBlanco;
+            color: variables.$colorBlanco;
             ;
         }
 
@@ -376,7 +373,7 @@ footer {
 
     .copyright {
         text-align: center;
-        color: $colorBlanco;
+        color: variables.$colorBlanco;
         font-size: 0.8rem;
     }
 }
@@ -403,11 +400,11 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $colorBackground;
+        background-color: variables.$colorBackground;
     }
 
     a {
-        color: $colorNaranja;
+        color: variables.$colorNaranja;
         text-decoration: none;
 
     }
@@ -420,10 +417,10 @@ footer {
         padding: 0.5rem;
         gap: 1rem;
         list-style-type: none;
-        background-color: $colorBackground;
+        background-color: variables.$colorBackground;
 
         .linksInicioStyle {
-            color: $colorNaranja;
+            color: variables.$colorNaranja;
             text-decoration: none;
         }
 
@@ -433,13 +430,13 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
-        color: $colorBlanco;
+        color: variables.$colorBlanco;
         margin: 3;
         text-align: center;
     }
 
     ------- main {
-        background-color: $colorFondo;
+        background-color: variables.$colorFondo;
         border-radius: 0.5rem;
     }
 
@@ -477,6 +474,45 @@ footer {
 @media (min-width: 1003px) {
     .contenedorMenu {
         grid-template-columns: repeat(3, 1fr);
+
+        .menuCafe {
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            grid-template-columns: 1fr;
+
+            .nombreCafe {
+                grid-area: 1/1/2/1;
+                justify-self: center;
+            }
+
+            .descCafe {
+                grid-area: 2/1/3/1;
+            }
+
+            .precioCafe {
+                grid-area: 3/1/4/1;
+            }
+
+            .imgCafe {
+                grid-area: 4/1/6/1;
+                justify-self: center;
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+    }
+
+
+
+
+
+}
+
+
+@media (min-width: 1200px) {
+    .contenedorMenu {
+        grid-template-columns: repeat(4, 1fr);
 
         .menuCafe {
             display: grid;
