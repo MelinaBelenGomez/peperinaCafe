@@ -1,6 +1,26 @@
-@mixin bloqueDisplay($displayValue,$gapValue, $marginValue, $alignValue){
-    display: $displayValue;
-    gap: $gapValue;
-    margin: $marginValue;
-    align-items: $alignValue;
+//**sacar bloqueDisplay
+
+
+@mixin flexbox($direction,$justify, $align, $gap){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin grid($columns, $rows, $gap: 0) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+}
+
+@mixin boton($bgColor, $textColor) {
+    background-color: $bgColor;
+    color: $textColor;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
 }

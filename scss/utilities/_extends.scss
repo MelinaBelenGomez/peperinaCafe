@@ -1,0 +1,8 @@
+@use "./variables";
+
+%tituloBase{
+    text-align: center;
+    color: variables.$colorNaranja;
+    letter-spacing: 0.25rem;
+}
+
