@@ -126,6 +126,12 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  transition: transform 0.3s ease-in-out;
+}
+.bodyMainNuestroMenu .menuCafe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
 }
 .bodyMainNuestroMenu .menuCafe .nombreCafe {
   grid-area: 1/1/2/2;
