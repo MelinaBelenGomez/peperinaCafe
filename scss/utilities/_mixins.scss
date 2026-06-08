@@ -1,6 +1,3 @@
-//**sacar bloqueDisplay
-
-
 @mixin flexbox($direction,$justify, $align, $gap){
     display:flex;
     flex-direction: $direction;
