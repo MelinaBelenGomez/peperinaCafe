@@ -109,7 +109,7 @@ main {
 //Flip de Menú - Cards
 
 .cardCafe {
-    width: min(100%, 250px);
+    width: 250px;
     height: 350px;
     perspective: 1000px;
 }
@@ -131,35 +131,15 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
+
     backface-visibility: hidden;
     border-radius: 10px;
 }
 
-.cardFront {
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    align-items: center;
-    background-color: variables.$colorNegro;
-
-    .nombreCafe {
-        text-align: center;
-        color: variables.$colorNaranja;
-        margin: 1rem 0 0.25rem;
-    }
-
-    .precioCafe {
-        margin: 0 0 0.75rem;
-    }
-
-    .imgCafe {
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        object-fit: cover;
-        display: block;
-    }
+.cardFront img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .descCafe {
@@ -169,7 +149,6 @@ main {
 .cardBack {
     background-color: variables.$colorNaranja;
     transform: rotateY(180deg);
-    padding: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -196,7 +175,7 @@ main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
     }
-    
+
     .tituloMenu {
         @extend %tituloBase;
         justify-self: flex-end;
@@ -224,7 +203,6 @@ main {
 
     .contenedorMenu {
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
         margin: 1rem;
         justify-items: center;
@@ -499,6 +477,12 @@ footer {
     .contenedorMenu {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contenedorMenu img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 }
 
 
@@ -578,5 +562,4 @@ footer {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
     }
-
 }
