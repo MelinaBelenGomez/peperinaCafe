@@ -88,6 +88,9 @@ main {
   text-align: center;
 }
 
+.contenedorMenu {
+  padding-bottom: 3rem;
+}
 .contenedorMenu .cardCafe {
   width: 90vw;
   max-width: 340px;
