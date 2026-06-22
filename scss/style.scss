@@ -256,9 +256,6 @@ main {
     @include mixins.grid(repeat(2, 1fr), 1fr);
     background-color: variables.$colorFondo;
 
-
-
-
     .mainDatosLocalUbicacion {
         grid-area: 1/1/2/2;
         display: grid;
@@ -300,14 +297,29 @@ main {
     }
 }
 
-.conoceNuestrosLocales {
-    background-color: variables.$colorNaranja;
-    color: variables.$colorBlanco;
-    justify-self: center;
-    padding: 1rem;
-    border-radius: .5rem;
-    margin: 1rem;
+.contenedorPreCarrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 1rem 0;
+
+    .conoceNuestrosLocales {
+        background-color: variables.$colorNaranja;
+        color: variables.$colorBlanco;
+        padding: 0.3rem 0.8rem;
+        border-radius: .5rem;
+        margin: 0;
+        width: fit-content;
+    }
+
+    .flechaNar {
+        width: 6rem;
+        height: auto;
+    }
 }
+
+
 
 .contenedorContacto {
     display: flex;
@@ -344,9 +356,11 @@ main {
         }
 
         .textareaContacto {
-            width: 100%;
+            width: 80%;
+            max-width: 500px;
             height: 10rem;
-
+            display: block;
+            margin: 0 auto;
         }
 
 

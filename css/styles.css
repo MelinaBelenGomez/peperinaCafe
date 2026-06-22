@@ -241,13 +241,24 @@ main {
   border-radius: 25%;
 }
 
-.conoceNuestrosLocales {
+.contenedorPreCarrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+.contenedorPreCarrousel .conoceNuestrosLocales {
   background-color: #f0680e;
   color: #fff;
-  justify-self: center;
-  padding: 1rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 0.5rem;
-  margin: 1rem;
+  margin: 0;
+  width: fit-content;
+}
+.contenedorPreCarrousel .flechaNar {
+  width: 6rem;
+  height: auto;
 }
 
 .contenedorContacto {
@@ -285,8 +296,11 @@ main {
   background-color: rgb(243.7007874016, 133.937007874, 61.2992125984);
 }
 .contenedorContacto .formularioContacto .textareaContacto {
-  width: 100%;
+  width: 80%;
+  max-width: 500px;
   height: 10rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .iconoTazaFooter {
