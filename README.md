@@ -1,1 +1,1 @@
-"# peperinaCafe" 
+Peperina es una web institucional desarrollada para una cafetería de especialidad. El proyecto fue realizado con HTML5, SASS y Bootstrap, aplicando diseño responsive, buenas prácticas de SEO, estructura semántica y una identidad visual personalizada.
